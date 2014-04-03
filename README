@@ -1,0 +1,19 @@
+# p4_bygene_compotest.py v1.0
+#
+# Chris Laumer 3 April 2014 GPL v2
+#
+# This is a minimally written script, designed to individually test a set of genes 
+# for compositional heterogeneity using null simulations as implemented in p4 v0.9.0, 
+# simulating on inferred ML gene trees. Run it in a folder for which you have, with 
+# each gene, the following information:
+#
+# a.) A phylip-formatted MSA, named [gene].phylip
+# b.) A maximum likelihood tree in newick form, here called RAxML_bestTree.[gene]_ML
+# c.) A model, in the format output by ProteinModelSelection.pl, named [gene]_model.txt.
+#     The only models supported are those used by p4; you may have to modify ProteinModelSelection.pl
+#     accordingly.
+#
+# If these conditions are met, running the script should print the name of each gene, plus
+# the p-value for the null test, both to standard output and to a file called "by_gene_compo_test.txt".
+# If you are running it on a computer with many CPUs, the python multiprocessing module
+# will automatically try to use all of those processes (good for an HPC cluster, bad for a desktop).
