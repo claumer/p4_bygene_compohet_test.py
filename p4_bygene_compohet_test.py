@@ -1,4 +1,4 @@
-# p4_bygene_compotest.py v1.0
+# p4_bygene_compothet_est.py v1.0
 #
 # Chris Laumer 3 April 2014 GPL v2
 #
